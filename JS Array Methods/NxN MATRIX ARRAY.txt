@@ -1,0 +1,7 @@
+let size = 3
+let myArray = Array(size).fill( Array(size).fill('*') );
+
+Output
+[*,*,*]
+[*,*,*]
+[*,*,*]

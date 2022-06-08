@@ -1,0 +1,5 @@
+let str = 'abv66bn75'
+let num = str.replace(/[^0-9]/g, '').length;
+console.log(num);
+
+	Output - 4

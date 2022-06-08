@@ -1,0 +1,14 @@
+let person {
+	name: 'Ivo'
+	age: '30'
+}
+
+Добаване на ключ и стойност
+	person.pet = 'Cat' 
+ или    person['pet] = 'Cat'
+Може и по двата начина
+
+ПРОМЯНА
+
+	person.name = 'Krasen'
+или     person['name'] = 'Krasen'

@@ -1,0 +1,2 @@
+let char = 'a'
+let number = char.charCodeAt(0); взима числото от ASCII таблицата

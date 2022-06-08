@@ -1,0 +1,15 @@
+let text = 'Krasen'
+let chars = text.match(/\w/)
+console.log(chars);
+
+Output :
+	['K', index: 0, input: 'Krasen', groups: undefined]
+Връща масив с първото срещнато съвпадение. На нулева позиция е първото съвпадение което намира.
+
+Aко искаме да полчим масив с всички букви от стринга трябва да търсим глобално 
+Това става като накрая на regEx-a добавим буквата 'g' - /\w/g
+let text = 'Krasen'
+let chars = text.match(/\w/g)
+console.log(chars);
+Output :
+	['K', 'r', 'a', 's', 'e', 'n']

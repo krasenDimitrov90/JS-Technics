@@ -1,0 +1,7 @@
+
+let foo = 'SomeText'
+if (! /^[a-zA-Z0-9]+$/.test(foo)) {
+    // Validation failed
+}
+
+Проверява дали стринга съдържа само числа и буквите от азбуката

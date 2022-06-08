@@ -1,0 +1,11 @@
+let str = '12345'
+str = str.substring(0,1) + str.slice(3)
+console.log(str);
+Резултат = '145'
+
+
+stops = Hawai::RomeCyprys-Greece
+let endtIndex = 11;
+let startIndex = 16;
+stops = stops.substring(0,startIndex) + stops.slice(endtIndex + 1)
+Output = Hawai::Rome-Greece

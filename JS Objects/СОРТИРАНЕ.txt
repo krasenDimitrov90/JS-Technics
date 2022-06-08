@@ -1,0 +1,36 @@
+const obj = {
+   "CAB": {
+      name: 'CBSSP',
+      position: 2
+   },
+   "NSG": {
+      name: 'NNSSP',
+      position: 3
+   },
+   "EQU": {
+      name: 'SSP',
+      position: 1
+   }
+};
+const sortByPosition = obj => {
+   const order = [], res = {};
+   Object.keys(obj).forEach(key => {
+      return order[obj[key]['position'] - 1] = key;
+   });
+   order.forEach(key => {
+      res[key] = obj[key];
+   });
+   return res;
+}
+console.log(sortByPosition(obj));
+
+
+Тук ги сортираме по 'position'
+
+ресултат 
+
+{
+   EQU: { name: 'SSP', position: 1 },
+   CAB: { name: 'CBSSP', position: 2 },
+   NSG: { name: 'NNSSP', position: 3 }
+}

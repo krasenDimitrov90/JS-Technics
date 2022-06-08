@@ -1,0 +1,9 @@
+let str = '123dadad-IVO===_[] lp'
+let reg = str.split(/\W+/g) - Голямо W и + означава че ще изреже всичко което е буква , число или долна черта
+console.log(reg);
+
+Output -  ['123dadad', 'IVO', '_', 'lp']
+
+А може и така 
+	str = '@###Val1d1teM@###'
+	let arr = str.match(/\w+/)

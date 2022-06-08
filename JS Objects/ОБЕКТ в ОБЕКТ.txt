@@ -1,0 +1,8 @@
+let hero = {
+        name: 'Axie',
+        level: 24,
+        items: {
+            item1: 'sword',
+            item2:'knife'
+        }
+    }

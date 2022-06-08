@@ -1,0 +1,14 @@
+JSON.parse()
+
+function convertJSONToObject(input) {
+    let person = JSON.parse(input);
+    console.log(person);
+    
+}
+convertJSONToObject('{"name": "George", "age": 40, "town": "Sofia"}')
+
+Виждаме че инпута е в JSON формат , разбираме го по това че преди къдравите скоби има кавички
+както има кавички и пред всеки "key" ("name"  "age"  "town")
+Резултатът е 
+
+{name: 'George', age: 40, town: 'Sofia'}
