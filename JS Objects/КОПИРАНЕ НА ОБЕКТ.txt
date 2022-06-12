@@ -1,0 +1,3 @@
+JSON.parse(JSON.stringify(user))
+
+Но няма да копира функция ако има такава
