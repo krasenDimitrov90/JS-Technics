@@ -1,0 +1,39 @@
+let arr = [1,2,3,4,5,6,7,8,9];
+
+// pop()
+// let lastElement = arr.pop();
+// console.log(arr);
+// console.log(lastElement);
+
+// // shift()
+// let firstElement = arr.shift();
+// console.log(arr);
+// console.log(firstElement);
+
+// // unshift();
+// arr.unshift(4);
+// console.log(arr);
+// arr.unshift('Miro');
+// console.log(arr);
+
+// // push()
+// arr.push('Krasen');
+// console.log(arr);
+// arr.push('Doch');
+// console.log(arr);
+
+// // spread - '...'
+// let newArr = [5,7,4]
+// arr.push(...newArr);
+// console.log(arr);
+
+// // rest - '...'
+// let [num1 , num2 , mun3 , ...lastNums] = arr;
+// console.log(arr);
+// console.log(num1 , num2 , mun3);
+// console.log(lastNums);
+
+// // split() works with STRINGS
+// let text = "I am Miroslav Dimitrov";
+// let textAsArr = text.split('Miroslav');
+// console.log(textAsArr);
