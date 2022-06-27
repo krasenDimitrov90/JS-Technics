@@ -18,5 +18,8 @@ V zavisimost ot tova koq opciq sme izbrali shte ni vurne neinoto value
 
 Ako iskame da dostypim neiniq text pravim slednoto
 
-let choosedOption = inputUnitsElmnts.options[inputUnitsElmnts .selectedIndex].text;
+let choosedOption = inputUnitsElmnts.options[inputUnitsElmnts.selectedIndex].text;
 Shte ni vurne Teksta - <option value="km">Kilometers</option> Tuk teksta e 'Kilometers'
+
+Ako iskame indeksa na koito se namira option-a koito sme selektirali pishem:
+inputUnitsElmnts.selectedIndex
