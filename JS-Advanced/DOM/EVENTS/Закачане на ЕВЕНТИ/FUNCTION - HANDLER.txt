@@ -1,0 +1,19 @@
+При използване на FUNCTION HANDLER има два начина 
+
+Първия е като напишем цялата функция в скобите след addEventListener()
+	Primer element.addEventListener('click' , function(e){
+			console.log(e.currentTarget);
+		})
+
+Втория е като си декларираме функцията предварително
+
+	function print(e) {
+			console.log(e.currentTarget);
+		}
+
+Само че ако използваме втория метод , когато закачаме евент към елемент 
+не трябва да пишем скоби след HANDLER-a 
+	т.е
+		element.addEventListener('click' , print)
+	вместо 
+		element.addEventListener('click' , print()) - така няма да работи

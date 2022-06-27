@@ -1,0 +1,8 @@
+Array.from()
+Примерно
+
+взимаме няколко на брой елемента с помоща на querySelectorAll('p') - в този случай всички параграфи и 
+ги вкарваме в масив
+
+let paragraphs = querySelectorAll('p')
+let arr = Array.from(paragrahs)

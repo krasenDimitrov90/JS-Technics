@@ -1,0 +1,33 @@
+element.addEventListener('onclick' , function (e) => {
+	e.stopPropagation();
+	console.log("some text here")
+
+})
+
+Изпълнява се таргета след което в BUBLLING фазата нищо друго не се изшълнява.
+
+<div id="parent">
+      <h1>Parent</h1>
+      <div id="child">
+        <h2>Child</h2>
+      </div>
+</div>
+      
+      <script>
+        let parentElement = document.getElementById('paren')
+        let childElement = document.getElementById('child')
+        
+        parentElement.addEventListener('click' , function (e) => {
+          console.log('Parent');
+        })
+        childElement.addEventListener('click' , function (e) => {
+          e.stopPropagation();
+          console.log('Child');
+        })
+      </script>
+
+Имаме два евента , един при parentElement и един при childElement.При натискане върху parentElement на конзолата
+ще се изпише Parent и програмата ще спре.Но при натискане на childElement на конзолата ще се изпише 
+първо Child и след това Parent защото изпълненито е в BUBLLING фазата и двата тага (h1 h2) са в един DIV. 
+И затова във childElement.addEventListener('click' , function (e)
+добавяме  e.stopPropagation(); за да предотвратим последващо изпълнение на евенти в BUBLLING фазата

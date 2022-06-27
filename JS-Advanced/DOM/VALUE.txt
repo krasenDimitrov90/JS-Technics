@@ -1,0 +1,10 @@
+!!! ВАЖНО !!!
+
+value взима стойността на самозатварящи се тагове , докато textContent взима стойността м/у
+отварящ и затварящ таг
+
+<input type="text" id="username" /> поле в което да напишем нещо , в този случай име на потребител (Красен)
+let userEl = document.getElementById('username')
+concole.log(userEl.value)
+Output
+	Красен

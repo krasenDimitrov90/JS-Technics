@@ -1,0 +1,38 @@
+currentTarget е елемента към който е прикрепен хендлъра
+
+Пример 
+    <ul id="items">
+      <li>The Matrix</li>
+      <li>Man of steel</li>
+      <li>Riddick</li>
+    </ul>
+let ulElements = document.getElementById('items');
+ulElements.forEach(el => {
+	el.addEventListener('click' , function (e) => {
+		e.currentTarget.style.textDecoration = 'line-trough'
+	})
+
+})
+
+В този случай e.currentTarget сочи към EVENT OBJECT-a на елемента (el) който в случая е <li></li> 
+
+A ако вместо това напишем следното
+
+ulElements.addEventListener('click' , function (e) => {
+		e.currentTarget.style.textDecoration = 'line-trough'
+	})
+e.currentTarget сочи към EVENT OBJECT-a на елемента (el) който в случая е <ul></ul> 
+И ако отворим браузъра и щракнем някъде в полето на <ul> елемента ще .style.textDecoration = 'line-trough'
+ще се изпълни за всички <li> елементи .
+
+А ако вместо това напишем 
+ulElements.addEventListener('click' , function (e) => {
+		e.target.style.textDecoration = 'line-trough'
+	})
+e.target сочи към <li> елеемнтите и ако отворим браузъра и щракнем на някой от тях 
+.style.textDecoration = 'line-trough' ще се изпълни за конкретния <li> елемент който сме натиснали
+
+ПРОБЛЕМ обаче ще се отрази в това че ако натиснем някъде на <ul> елемента .style.textDecoration = 'line-trough'
+ще се изпълни на всички <li> елементи което трябва да отстраним примерно с if проверка в която да кажем
+if(e.targetName == 'LI') {e.target.style.textDecoration = 'line-trough'} и така ще се изпълни само за 
+<li> елементите

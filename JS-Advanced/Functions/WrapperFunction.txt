@@ -1,0 +1,20 @@
+See in Google for more information
+
+Example
+
+Функция която настройва елемент който да се показва за 2 секунди
+
+function notify(message) {
+    
+    let notificationEl = document.getElementById('notification');
+    notificationEl.textContent = message;
+    notificationEl.style.display = 'inline-block'
+
+    setTimeout(() => {
+        notificationEl.style.display = 'none' 
+    }, "2000")
+}
+
+Забелязваме че setTimeout направо няма нито представка function нито е създадена чрез 
+function declaraition т.е. let setTimeout = () => {}; или
+let setTimeout = function() {}

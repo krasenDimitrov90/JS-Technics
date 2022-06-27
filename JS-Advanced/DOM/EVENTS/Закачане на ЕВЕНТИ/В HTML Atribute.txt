@@ -1,0 +1,3 @@
+<button onclick="onAddClick(event)">Add</button>
+
+Тук създаваме евент като атрибут на бутона

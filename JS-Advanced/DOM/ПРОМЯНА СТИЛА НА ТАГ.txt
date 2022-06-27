@@ -1,0 +1,5 @@
+let tableElements = document.querySelectorAll('table tr:nth-of-type(even)');
+    tableElements.forEach(x => x.style.background = 'teal')
+
+Както се вижда във forEach-a със .style ще променим стила на всеки елемент
+В конкретния случай със .style.background ще променим фон на всеки елемнт

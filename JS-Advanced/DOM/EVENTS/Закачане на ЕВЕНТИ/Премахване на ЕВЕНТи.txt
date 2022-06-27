@@ -1,0 +1,13 @@
+element.removeEventListener(event , handler)
+event - името на евента примерно - 'click'
+handler - името на handlera - примерно sayHello()
+sayHello е функция която сме създали предварително някъде в програмата и сме я закачили
+като хендлър на евента 
+
+Пример 
+function sayHello() {
+	console.log("Hello");
+}
+Ако сме я добавили като хендлър към element-a ето така я премахваме от него
+element.removeEventListener('click', sayHello() )
+ 

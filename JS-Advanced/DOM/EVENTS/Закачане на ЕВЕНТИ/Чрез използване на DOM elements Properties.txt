@@ -1,0 +1,8 @@
+<button id = "add">Add</button>
+let addButtonElement = document.getElementById('add')
+addButtonElement.onclick = () => {
+	console.log('some text here');
+}
+
+Т.е взимаме елемента и му добавяме евент в случая (onclick) и директно след него добавяме функцията която искаме  да се 
+изпълнва.

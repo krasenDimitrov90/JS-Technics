@@ -1,0 +1,8 @@
+Propertie-тата на таговете могат да се достъпват подобно на обектите в JS
+Примерно
+	<span id="text" style= "display:none">Welcome to JavaScript and DOM.</span>
+Ако искаме да променим display:none на display:inline правим следното
+
+let spanElement = document.getElementById('text')
+spanElement.style.display = 'inline';
+

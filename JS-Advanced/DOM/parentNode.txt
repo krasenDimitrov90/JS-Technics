@@ -1,0 +1,9 @@
+връща родител (parent-a) на даден елемент
+
+element.parentNode
+
+<ul>
+   <li></li>
+</ul>
+
+li.parentNode - резултатът е <ul>...codeHere...</ul>

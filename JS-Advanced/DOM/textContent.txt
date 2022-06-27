@@ -1,0 +1,13 @@
+Взима стойността в тага 
+Пример 
+
+<p id = "paragraph">Hello</p>
+
+let parElement = document.getElementById('paragraph') - това взима референцията на ид-то което сме посочили
+console.log(parElement.textContent)
+
+Output = Hello
+
+concole.log(parElement)
+
+Output = <p id = "paragraph">Hello</p>

@@ -1,0 +1,14 @@
+Взима децата на родител
+
+                <tr>
+                    <td>Poole, Tracy</td>
+                    <td>Facilities/Engineering</td>
+                    <td>Full Time</td>
+                    <td>15.7.2019</td>
+                    <td>R</td>
+                    <td>71 670</td>
+                    <td>4</td>
+                </tr>
+
+let trElement = document.querySelectorAll('tr')
+let row1 = trElement.children[0] - <td>Poole, Tracy</td>

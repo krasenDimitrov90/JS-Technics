@@ -1,0 +1,5 @@
+създава нов елемент
+let newElement = document.createElement('p');
+
+създава нов елемент от тип параграф <p></p>
+newElement.textContent = "some text here"

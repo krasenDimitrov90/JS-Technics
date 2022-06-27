@@ -1,0 +1,11 @@
+Подобно на texContent но много повече
+Например можем да добавим HTML таг във израза
+
+<h1 id="heading">Hello from JS</h1>
+
+let hElement = document.getElementById('heading')
+hElement = 'Hello <em>from JS</em>'
+
+<em> тага ще промени шрифта на from JS 
+Ако използвахме textContent не можем да добавим HTML таг по този начин 
+и щеще да се изпише като стринг - Hello <em>from JS</em>

@@ -1,0 +1,16 @@
+Пример с EVENT onclick
+Към евента можем да закачим функция
+Пример 
+Създаваме си бутон
+<button>Add</button>
+След това му слагаме евент
+<button onclick="">Add</button>
+След което към евента прилагаме функция която предварително сме конструирали
+<button onclick="onAddClick()">Add</button>
+
+функцията в този пример е следната
+function onAddClick() {
+	console.log('clicked')
+}
+
+При натискане на бутона Add в конзолата (F12) ще се изпише - clicked

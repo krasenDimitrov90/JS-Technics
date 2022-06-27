@@ -1,0 +1,8 @@
+<input id="daysBtn" type="button" value="Convert">
+	let inputElement = document.getElementById('daysBtn')
+let idName = inputElement.id
+
+console.log(idName) = Output - daysBtn
+
+Работи със всички атрибути
+Взима стойността която съответсва на името на атрибута;

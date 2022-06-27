@@ -1,0 +1,20 @@
+appendChild() - добавя нов елемент на последна позиция
+
+li.appendChild(p) - добавя параграф във list 
+
+Друг пример 
+
+<ul id = "movies">
+    <li>The Matrix</li>
+</ul>
+
+	let ulElements = document.getElementById('movies')
+	let movieElement = document.createElement('li')
+	movieElement.textContent = 'Man of Steel'
+	ulElement.appendChild(movieElement)
+
+Output
+<ul id = "movies">
+    <li>The Matrix</li>
+    <li>Man of Steel</li>
+</ul>
