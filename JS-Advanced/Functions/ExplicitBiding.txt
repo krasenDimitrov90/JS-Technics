@@ -1,0 +1,63 @@
+call() ,
+apply() , 
+bind()
+
+call() and apply() са почти еднакви като изпълнение , т.е. почти няма значение кое от двете ползваме
+Докато bind() е съвсем различно
+
+call() and apply() са методи на ФУНКЦИИ които променят контекста на функцията на пример
+Ако направим следното :
+function introduce() {
+    console.log(`Hello my name is ${this.name}`);
+}
+let person = {
+    name: 'Pesho'
+}
+introduce() - Otput - Hello my name is undefined
+
+
+
+
+Но ако направим така :
+function introduce() {
+    console.log(`Hello my name is ${this.name}`);
+}
+let person = {
+    name: 'Pesho'
+}
+introduce.call(person)
+
+Чрез call() метода ние подаваме аргумент , в случая person , който да използваме като контекст на функцията
+
+Разликата между call() and apply() е че след подаване на аргумента който да ползваме като контекст
+можем да добавим още аргументи
+Но при call() ги добавяме всеки следващ аргумент със запетая , т.е. спреднати
+А при apply ги подаваме като масив 
+
+Ето и пример:
+function introduce(firstName , lastName) {
+    console.log(`Hello ${firstName} ${lastName} my name is ${this.name}`);
+}
+let person = {
+    name: 'Pesho'
+}
+introduce.call(person , 'Gosho' , 'Georgiev') - отделни аргументи
+introduce.apply(person , ['Gosho' , 'Georgiev']) - масив от аргументи
+Output - два пъти - Hello Gosho Georgiev my name is Pesho
+
+bind() метода от своя страна има една много важна разлика и тя е че когато го приложим 
+задължително трябва да си създадем нова променлива (подобно на function expresion)
+която да приравним към към вече съществуваща функция и новата променлива има вече 
+свойствата на функция която да извикаме когато ни потрябва , със вече сменения контекст
+Ето и пример:
+function introduce(firstName , lastName) {
+    console.log(`Hello ${firstName} ${lastName} my name is ${this.name}`);
+}
+let person = {
+    name: 'Pesho'
+}
+let newIntroduce = introduce.bind(person , 'Gosho' , 'Georgiev')
+newIntroduce()
+Създаваме newIntroduce който байндваме, един вид , към вече създадената ни функция introduce 
+след което я извикваме , като вече сме променили контекста , в случая person ни е новия контекст
+а 'Gosho' , 'Georgiev' са останалите аргументи които подаваме

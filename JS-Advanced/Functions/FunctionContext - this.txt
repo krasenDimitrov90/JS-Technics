@@ -1,0 +1,35 @@
+this === function context
+В зависимост от това как е извикана функцията this сочи към различен контекст(или обект)
+
+ако имаме 
+function solve {console.log(this)};
+и я извикаме по следния начин 
+	solve() - this ще сочи към глобалния контекст - Това е т.нар. GLOBAL INVOCATION
+Примерно извикана в браузъра по този начин this === window , т.е. на глобалния обект на браузъра
+
+Ако пък имаме 
+let obj = {
+	name: 'Peter',
+	greed() {
+		console.log(this.name)
+	}
+}
+
+и я извикаме така
+METHOD INVOCATION
+obj.greed() - this ще сочи към контекста на на функцията , а контекста 
+на функцията в случая е обекта obj и name ще е Peter
+
+и ако извикаме solve вътре в обекта ето така
+function solve() {
+    console.log(this);
+}
+let obj = {
+    name: 'Peter',
+    greed() {
+        solve()
+    }
+}
+obj.greed()
+Тук първо извикваме greed() който от своя страна извиква solve()
+въпреки че solve() е извикана вътре в обекта this ще сочи отново към глобалния контекст понеже това се нарича GLOBAL INVOCING 

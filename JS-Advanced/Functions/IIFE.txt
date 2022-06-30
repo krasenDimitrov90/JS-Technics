@@ -1,0 +1,13 @@
+IIFE is a Immediately-Invoked Function Expressions
+
+Функция кояято се извиква сама веднага след изпълнението си 
+Трябва да се представи като function expresion , т.е. да се затвори в скоби
+и веднага след нея се слагат други скоби които я извикват 
+  (function solve() {
+    console.log('Hello world');
+  })()
+
+Може и да е анонимна 
+(function () {
+    console.log('Hello world');
+})()

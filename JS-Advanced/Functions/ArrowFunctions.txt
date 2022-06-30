@@ -1,0 +1,40 @@
+Разликата с другите видове функции (function declaraition , function expresion) 
+е в това към кой контекст сочи this
+Ето един пример
+let obj = {
+    name: 'Peter',
+    lasName: 'Georgiev',
+    introduce() {
+        const getFullName = function () {
+            return this.name + ' ' + this.lasName
+        }
+        console.log(`Hello my name is ${getFullName()}`);
+    }
+}
+obj.introduce()
+Output - Hello my name is undefined undefined
+Извикваме obj.introduce() - method invocation , който извиква в себе си съдържа функцията getFullName() , 
+която би трябвало да ни върне Peter Georgiev само че извикан по този начин getFullName() - global invocation
+тя сочи към глобалния контекст и заатова връща два пъти undefined.
+
+За да изпълним задачата вместо да я декларираме по този начин , използваме ARROW FUNCTION ,
+let obj = {
+    name: 'Peter',
+    lasName: 'Georgiev',
+    introduce() {
+        const getFullName = () => {
+            return this.name + ' ' + this.lasName
+        }
+        console.log(`Hello my name is ${getFullName()}`);
+    }
+}
+obj.introduce()
+Output - Hello my name is Peter Georgiev
+а тя от своя страна ще сочи към контекста на на най близката функция в която се намира 
+в случая introduce() и понеже introduce() е извикан така obj.introduce() , т.е. чрез METHOD INVOCATION 
+introduce() сочи към обекта и AROWW функцията getFullName() приема контекста на introduce()
+
+В ДПЪЛНЕНИЕ !!!
+Arow функцията ще наслиде контекста (this) на най близката нормална функция отгоре й, т.е. ако отгоре й има
+друга Arow функция няма да наследи нейния контекст .Трябва да е функция която е декларирана чрез
+function declaration
