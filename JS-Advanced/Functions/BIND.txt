@@ -1,0 +1,34 @@
+Още нешо което да знаем - прочети най отдолу на файла!!!
+
+
+bind() метода от своя страна има една много важна разлика и тя е че когато го приложим 
+задължително трябва да си създадем нова променлива (подобно на function expresion)
+която да приравним към към вече съществуваща функция и новата променлива има вече 
+свойствата на функция която да извикаме когато ни потрябва , със вече сменения контекст
+Ето и пример:
+function introduce(firstName , lastName) {
+    console.log(`Hello ${firstName} ${lastName} my name is ${this.name}`);
+}
+let person = {
+    name: 'Pesho'
+}
+let newIntroduce = introduce.bind(person , 'Gosho' , 'Georgiev')
+newIntroduce()
+Създаваме newIntroduce който байндваме, един вид , към вече създадената ни функция introduce 
+след което я извикваме , като вече сме променили контекста , в случая person ни е новия контекст
+а 'Gosho' , 'Georgiev' са останалите аргументи които подаваме
+
+
+При bind можем и да подадем аргументите на по късен етап , т.е след като предварително
+сме байднали някаква функция към друга ето и пример:
+
+function introduce(firstName , lastName) {
+    console.log(`Hello ${firstName} ${lastName} my name is ${this.name}`);
+}
+let person = {
+    name: 'Pesho'
+}
+let newIntroduce = introduce.bind(person)
+newIntroduce('Gosho' , 'Georgiev')
+Първо придаваме контекста на person и после подаваме аргументите през вече създадената и байнданата 
+нова функция newIntroduce 
