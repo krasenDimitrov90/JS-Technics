@@ -1,0 +1,15 @@
+Това е функция която подаваш като аргумент към друга функция
+
+например :
+function print(name) {
+    console.log(`Hello ${name}`);
+}
+
+function doSome(callback) {
+    let name = 'Krasen';
+    callback(name);
+}
+
+doSome(print);
+
+print() е callback функцията която се подава като аргумент към doSome() функцията

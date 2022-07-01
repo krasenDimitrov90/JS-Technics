@@ -32,3 +32,17 @@ let newIntroduce = introduce.bind(person)
 newIntroduce('Gosho' , 'Georgiev')
 Първо придаваме контекста на person и после подаваме аргументите през вече създадената и байнданата 
 нова функция newIntroduce 
+
+Ето още един пример
+
+function solution(number) {
+    function add(num1, num2) {
+        return num1 + num2;
+    }
+    return add.bind(this, number);
+}
+
+
+let add5 = solution(5);
+console.log(add5(2));  - Output = 7
+console.log(add5(3));  - Output = 8
