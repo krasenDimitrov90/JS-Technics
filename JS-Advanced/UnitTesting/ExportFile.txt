@@ -1,0 +1,15 @@
+04. Sum of Numbers.js
+	function sum(arr) {
+          let sum = 0;
+          for (let num of arr){
+          sum += Number(num);
+          }
+          return sum;
+          }
+
+          module.exports = sum;
+
+04. Sum of Numbers.test.js
+
+	const sum = require('./04. Sum of Numbers');
+	const expect = require('chai').expect;

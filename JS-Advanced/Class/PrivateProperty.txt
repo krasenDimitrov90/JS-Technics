@@ -1,0 +1,13 @@
+Създава се като пред пропъртито сложим '#'
+
+class Square {
+    #pi = Math.PI
+    constructor(x) {
+        this.x = x;
+    }
+    area() {
+        return this.x ** 2;
+    }
+}
+
+#pi е private property което можем да използваме където искаме но не можем да променяме

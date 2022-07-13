@@ -1,0 +1,20 @@
+function solve(a, b) {
+	return a + b;
+}
+
+module.exports = solve - taka exportvame funkciqta za da q polzvame v dug fail
+
+kogato otidem v dugiq fail 
+Ako sme go krustili Naprimer
+calculator.js
+
+i iskame da importnem funkciqta calc vuv nego pravim slednoto 
+suzdavame si promenliva i kum neq priravnqmvame slednoto
+
+const calc = require('./calculator') - ne e nujno da pishem .js 
+
+V calculator.js mojem i da imame poveche funkcii , tova nqma znachenie ,
+nie pak exportvame samo tazi koqto sme izbrali
+
+Sushto taka ne e zaduljitelno da exportvame funkciq , mojem da exportvame vsichko,
+obekti , masivi , stringove , i t.n.

@@ -1,0 +1,4 @@
+GO TO :
+	File - Preferenses - Setings
+	type - snippetSuggestions 
+	Editor Snippet Suggestion - choose "top"
