@@ -1,0 +1,29 @@
+seter-a приема стойност и на база на нея може да променя вече създадени стойности 
+които са в конструктора 
+например ако сме задали променлива която да е равна например на 4
+а функцията на сетъра е с формула която разделя стойноста на две и и придава тази нова стойност
+вече без да я променяме на ръка , тя се променя динамично при извикването на сетъра
+
+
+set diameter(value) - задължително подаваме value и като извикваме сетъра го правим така
+obj.diameter = 50 obj е някакъв обект , 50 е число просто за примера 
+
+class Circle {
+    constructor(radius) {
+        this.radius = radius;
+    }
+    get diameter() {
+        return this.radius * 2;
+    }
+    set diameter(value) { 
+        this.radius = value / 2;
+    }
+}
+
+let c = new Circle(2);
+console.log(c.diameter); Output 4
+c.radius = 4;
+console.log(c.diameter);Output 8
+console.log(c.radius);Output 4
+c.diameter = 50
+console.log(c.radius);Output 25
