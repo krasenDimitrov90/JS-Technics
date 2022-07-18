@@ -1,0 +1,14 @@
+Object.create() - use when we want to set an existing object to be prototype 
+of new created object
+let person = {name:'Krasen'}
+let newPerson = Object.create(person) 
+newPerson is an empty object with prototype person , and if we try to enter his name like this
+newPerson.name - expected output is Krasen , because when an object doesn't have some
+property , he try to find it in his prototype, in this case in person, thus person has own property
+name , wich is 'Krasen' this is the output for newPerson.name
+If we write this
+newPerson.name = 'Donika'
+console.log(newPerson.name) - Output - Donika
+console.log(person.name) - Output - Krasen
+
+Object.assign() - return a new shalow coppy of existing object
