@@ -1,0 +1,51 @@
+With Array.prototype we can make a new methods for Array Object and use it whenever we need
+
+Let's see a simple example of how it works
+
+(function solve() {
+    Array.prototype.last = function () {
+        return this[this.length - 1];
+    }
+
+    Array.prototype.skip = function (num) {
+        let length = this.length;
+        let newArr = []
+        for (let i = num ; i < length; i++) {
+            newArr.push(this[i]);
+        }
+        return newArr;
+    }
+
+    Array.prototype.take = function (num) {
+        let newArr = [];
+        for (let i = 0; i < num; i++) {
+            newArr.push(this[i]);
+        }
+        return newArr;
+    }
+
+    Array.prototype.sum = function () {
+        let sum = 0;
+        for (let num of this) {
+            sum += Number(num);
+        }
+        return sum;
+    }
+
+    Array.prototype.average = function () {
+        let sum = 0;
+        for (let num of this) {
+            sum += Number(num)
+        }
+        return sum / this.length;
+    }
+})()
+
+let arr = [1,2,3,3,4,5];
+let arr2 = arr.skip(2);
+let arr3 = arr.take(3);
+
+console.log(arr.last()); // [3]
+console.log(arr2);  // [1, 2, 3]
+console.log(arr3);  // 
+console.log(arr);   // [1,2,3,3,4,5]
