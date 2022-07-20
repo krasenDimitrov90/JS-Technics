@@ -1,0 +1,25 @@
+Primer ot internet
+
+var Person = function (first, last) {
+  this.firstName = first;
+  this.lastName = last;
+};
+
+Object.defineProperty(Person, 'species', {
+  writable: false,
+  value: 'human'
+});
+
+Object.defineProperty(Person, 'fullName', {
+  get: function () {
+    return this.firstName + ' ' + this.lastName;
+  },
+  set: function (value) {
+    var splitString = value.trim().split(' ');
+
+    if(splitString.length === 2) {
+      this.firstName = splitString[0];
+      this.lastName = splitString[1];
+    }
+  }
+});

@@ -1,0 +1,26 @@
+function Person(name, email) {
+        this.name = name;
+        this.email = email;
+    }
+
+    function Teacher (name, email, subject) {
+        this.subject = subject
+        Person.call(this, name, email)
+    }
+
+    Teacher.prototype = Object.create(Person.prototype);
+
+Прототипа на Teacher наследява прототипа на Person.
+По този начин ползва нещата които са в Person.
+Ако в последствие добавим други методи на прототипа на Teacher те няма да се закачат и за Person 
+
+Teacher.prototype.greet = function () {
+        return this.name + ' ' + 'says Hi!';
+    }
+
+let teacher = new Teacher('Donika', 'gmail', 'sub')
+    let person = new Person('Krasen' , 'abv');
+    console.log(person);
+    console.log(teacher.greet());
+
+greet() e достъпен само в обекти създадени през Teacher , в Person го няма.

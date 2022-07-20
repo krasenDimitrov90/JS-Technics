@@ -1,0 +1,21 @@
+function Circle(radius) {
+    this.radius = radius;
+}
+Object.defineProperty(Circle.prototype, 'area', {
+    get: function() {
+      return this.radius + 5;
+    }
+  });
+
+  let c1 = new Circle(5);
+  let c2 = new Circle(7);
+  
+  console.log(c1.area);
+  console.log(c2.area);
+  console.log(c1.area === c2.area);
+
+
+Не съм сигурен :) но поне така ми изглежда , а имено
+Закачаме area getter на прототипа на Circle , който getter  да е еднакъв за всички нови 
+инстанции които бъдат създадени , а не да съсздаваме нов гетър за всяка една отделна инстанция
+и така да препълваме излишно паметта

@@ -1,0 +1,33 @@
+Акп искаме да прототип да наследи друг прототип и да ползва неговите методи 
+ако той самия няма такива и ако искаме да имаме достъп до 
+ИМЕТО НА КОНСТРУКТОРА МУ МОЖЕМ ДА НАПРАВИМ СЛЕДНОТО
+
+Child.prototype = Object.create(Parent.prototype, {
+    constructor: {value: Child, configurable: true}
+});
+
+Ето и примерна задача
+
+function Figure(units = 'cm') {
+    this.units = units;
+}
+
+Figure.prototype.changeUnits = function (newUnits) {
+    this.units = newUnits;
+}
+Figure.prototype.sayName = function () {
+    console.log(this.constructor.name);
+}
+
+function Circle() {
+    Figure.call(this)
+}
+
+Circle.prototype = Object.create(Figure.prototype, {
+    constructor: {value: Circle, configurable: true}
+});
+let f = new Figure
+let c = new Circle
+f.sayName() - // Output - Figure
+c.sayName() - // Output - Circle
+console.log(c.units)  - // Output - cm
