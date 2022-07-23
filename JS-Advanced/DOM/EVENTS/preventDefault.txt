@@ -1,0 +1,6 @@
+let createBtnEl = document.querySelector('.create');
+
+      createBtnEl.addEventListener('click', (e) => {
+         e.preventDefault();
+         console.log('Hello');
+      })

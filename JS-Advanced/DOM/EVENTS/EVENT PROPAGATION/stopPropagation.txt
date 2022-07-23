@@ -4,7 +4,7 @@ element.addEventListener('onclick' , function (e) => {
 
 })
 
-Изпълнява се таргета след което в BUBLLING фазата нищо друго не се изшълнява.
+Изпълнява се таргета след което в BUBLLING фазата нищо друго не се изпълнява.
 
 <div id="parent">
       <h1>Parent</h1>
